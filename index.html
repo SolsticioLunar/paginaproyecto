@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Centro Gabriela Mistral</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            margin-bottom: 0;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            border: none;
+        }
+
+        .container-fluid {
+            padding: 0;
+            margin: 0;
+        }
+
+        #burbujabusqueda {
+            display: none;
+        }
+
+        @font-face {
+            font-family: 'MiFuente';
+            src: url(FONT/Merriweather-Regular.ttf) format(truetype);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'MiFuente', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body style=" background-color: #F9F4E9; overflow-x: hidden;">
+    <nav class="navbar navbar-expand-lg navbar-dark style" style="background-color: #610000;">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-3" href="#">
+                <img src="https://archivodigital.gam.cl/images/logo.png" class="img-fluid" style="width: 100px;"
+                    alt="logo"></a>
+        </div>
+        <div class="ms-auto">
+            <a class="navbar-brand" href="#"><img src="logos/usuario.png" class="img-fluid" style="width: 60px;"
+                    alt="logo"></a>
+        </div>
+        <div class="ms-auto">
+            <a class="navbar-brand" href="#"><img src="logos/configuracion.png" class="img-fluid" style="width: 60px;"
+                    alt="logo"></a>
+        </div>
+        <div class="ms-auto">
+            <a class="navbar-brand" href="#"><img src="logos/megafono.png" class="img-fluid" style="width: 60px;"
+                    alt="logo"></a>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-light" style=" background-color: #8e2114;">
+        <div class="container-fluid d-flex lign-items-center justify-content-between">
+
+            <div class="d-flex align-items-center position-relative w-100 justify-content-between">
+
+                <img src="logos/casa.png" alt="icono1" style="width: 60px;">
+                <img src="logos/mapa.png" alt="icono2" style="width: 60px;">
+                <img src="logos/gabriela.png" alt="icono3" style="width: 60px;">
+                <img src="logos/patito.png" alt="icono4" style="width: 60px;">
+                <img src="logos/estilos.png" alt="icono5" style="width: 60px;">
+                <img src="logos/mayores.png" alt="icono6" style="width: 60px;">
+                <img src="logos/camara.png" alt="icono7" style="width: 60px;">
+                <img src="logos/calendario.png" alt="icono8" style="width: 60px;">
+                <a href="galeria.html">
+                    <img src="logos/biblioteca.png" alt="icono7" style="width: 60px;">
+                </a>
+                <img src="logos/ticket.png" alt="icono10" style="width: 60px;">
+
+                <div class="position-relative">
+                    <img src="logos/lupa.png" alt="buscar" id="btnlupa" style="width: 60px;">
+
+                    <div id="burbujabusqueda" class="search.bubble">
+                        <input type="text" class="form-control form-control-sm" placeholder="Buscar..."
+                            style="font-size: 0.8rem;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btnlupa =
+                document.getElementById('btnlupa');
+            const burbuja =
+                document.getElementById('burbujabusqueda');
+
+            btnlupa.addEventListener('click', (e) => {
+                e.stopPropagation();
+
+                if (burbuja.style.display === 'none' || burbuja.style.display === '') {
+                    burbuja.style.display = 'block';
+                } else {
+                    burbuja.style.display = 'none';
+                }
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!burbuja.contains(e.target) && !
+                    btnlupa.contains(e.target)) {
+                    burbuja.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <div style="height: 400px; overflow: hidden; background-color: black;">
+        <iframe
+            src="https://player.vimeo.com/video/1080586505?autoplay=1&amp;loop=1&amp;color=d90c6e&amp;title=0&amp;byline=0&amp;portrait=0&amp;muted=1"
+            allow="autoplay; fullscreen" allowfullscreen style="position: relative; width: 100%; height: 100%;">
+        </iframe>
+    </div>
+
+
+
+    <div class="mt-4">
+        <div class="container" style="background-color: #D38219; border-radius: 8px; padding: 20px;">
+            <div class="row g-3">
+
+                <div class="col-md-3">
+
+                    <div class="card mb-3" style="background-color: #FFD600; height: 430px;">
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <img src="fotos/obra1.png" alt="" class="img-fluid"
+                                style="max-height: 160px; object-fit: cover;">
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-warning text-dark">Teatro</span>
+                                <span class="badge bg-warning text-dark">Musica</span>
+                                <span class="badge bg-warning text-dark">Danza</span>
+                                <span class="badge bg-warning text-dark">Exposiciones</span>
+                                <span class="badge bg-warning text-dark">Interdisciplina</span>
+                            </div>
+                            <h6 class="card-title mt-1 mb-1" style="font-size: 1rem;">
+                                convocatoria Nacional Programacion 2026-2027
+                            </h6>
+                            <p class="card-text mb-1" style="font-size: 0.9rem;">27 Jun al 27 Jul 2025</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-3" style="background-color: #FF4081; height: 430px;">
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <img src="fotos/obra3.jpg" alt="" class="img-fluid"
+                                style="max-width: 160%; object-fit: cover;">
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-warning text-dark">Exposiciones</span>
+                            </div>
+                            <h6 class="card-title" style="font-size: 1rem;">
+                                Conmemorar y Celebrar
+                            </h6>
+                            <p class="card-text mb-1" style="font-size: 1rem;">11 Jul al 31 Ago 2025</p>
+                            <p class="card-text mb-1" style="font-size: 0.9rem;">Ma a Sá -- 10 a 21h Do -- 10 a 20h
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 ms-auto me-2">
+                    <div
+                        style="top: 220px; width: 400px; background-color: #B73710; height: 870px; z-index: 10; justify-content: center;">
+                        <div class="card-body d-flex flex-column  p-2">
+                            <img src="fotos/biblioteca.jpg" alt="" class="img-fluid"
+                                style="max-height: 300px; object-fit: cover;">
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-warning text-dark">Lectura</span>
+                                <span class="badge bg-warning text-dark">Concurso</span>
+                                <span class="badge bg-warning text-dark">Desafio</span>
+                            </div>
+                            <h6 class="card-title" style="font-size: 1rem;">¡Libreria GAM!</h6>
+                            <p class="card-text mb-1" style="font-size: 1rem;">Desafio Lector</p>
+                            <p class="card-text mb-1" style="font-size: 0.9rem;">Marzo a Diciembre</p>
+                        </div>
+                        <div class="mt-auto d-flex flex-column gap-2">
+                            <a href="inscripcion.html" class="btn btn-light w-300">Inscripción</a>
+                            <a href="galeria.html" class="btn btn-light w-100">Galeria De Libros</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 ms-auto me-2">
+
+                    <div class="card mb-3" style="background-color: #8BC34A; height: 430px;">
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <img src="fotos/moki.jpg" alt="" class="img-fluid"
+                                style="max-width: 160%; object-fit: cover;">
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-warning text-dark">Teatro</span>
+                            </div>
+                            <h6 class="card-title" style="font-size: 1rem;">
+                                Kaori
+                            </h6>
+                            <p class="card-text mb-1" style="font-size: 1rem;">5 al 13 Jul 2025</p>
+                            <p class="card-text mb-1" style="font-size: 0.9rem;">Sá y Do -- 16:30h</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-3" style="background-color: #7E57C2; height: 430px; ">
+                        <div class="card-body d-flex flex-column justify-content-between p-2">
+                            <img src="fotos/obra 4.jpg" alt="" class="img-fluid"
+                                style="max-width: 160%; object-fit: cover;">
+                            <div class="d-flex flex-wrap gap-1">
+                                <span class="badge bg-warning text-dark">Teatro</span>
+                            </div>
+                            <h6 class="card-title" style="font-size: 1rem;">
+                                Fundamento
+                            </h6>
+                            <p class="card-text mb-1" style="font-size: 1rem;">27 Jun al 6 Jul 2025</p>
+                            <p class="card-text mb-1" style="font-size: 0.9rem;">Ju y Vi -- 20h | Sá -- 18 y 20h</p>
+                            <p class="card-text mb-1" style="font-size: 0.9rem;">Do -- 19h (excepto 29 jun)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container my-5" style="background-color: #D38219; border-radius: 8px; padding: 20px;">
+        <div class="row justify-content-center">
+
+            <div class="col-md-4 mb-4">
+                <div class="p-3" style="background-color: #eee7dc;">
+                    <img src="fotos/mujer.jpg" class="img-fluid mb-3" alt="Imagen 1">
+                    <small class="text-muted">NOTICIA</small>
+                    <h5 class="mt-2 fw-bold">
+                        Maria José Cifuentes asumirá la dirección del mercat de les Flors
+                    </h5>
+                    <small class="text-muted d-block mt-2">
+                        FUENTE → <a href="#" class="text-dark text-decoration-none">COMUNICADO DE PRENSA</a>
+                    </small>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="p-3" style="background-color: #eee7dc;">
+                    <img src="fotos/corazon.jpg" class="img-fluid mb-3" alt="Imagen 2">
+                    <small class="text-muted">NOTICIA</small>
+                    <h5 class="mt-2 fw-bold">
+                        GAM y Citylab inauguran ciclo de arte urbano y ciudades humanizadas
+                    </h5>
+                    <small class="text-muted d-block mt-2">
+                        FUENTE → <a href="#" class="text-dark text-decoration-none">COMUNICADO DE PRENSA</a>
+                    </small>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="p-3" style="background-color: #eee7dc;">
+                    <img src="fotos/gente.jpg" class="img-fluid mb-3" alt="Imagen 3">
+                    <small class="text-muted">NOTICIA</small>
+                    <h5 class="mt-2 fw-bold">
+                        "Conjunto Escultórico" de federico Assler vuelve a exhibirse en GAM
+                    </h5>
+                    <small class="text-muted d-block mt-2">
+                        FUENTE → <a href="#" class="text-dark text-decoration-none">COMUNICADO DE PRENSA</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+
+        <div class="row text-uppercase fw-bold border-bottom pb-3 mb-4">
+            <div class="col text-center">Transparencia</div>
+            <div class="col text-center">Sala de prensa</div>
+            <div class="col text-center">Políticas de privacidad</div>
+        </div>
+
+
+        <div class="row text-center text-md-start">
+            <div class="col-md-3 mb-4">
+                <p class="fw-bold small">Auspiciador institucional</p>
+                <img src="logos/gobierno.jpg" alt="Ministerio" class="img-fluid mb-2">
+            </div>
+            <div class="col-md-3 mb-4">
+                <p class="fw-bold small">Aliado estratégico</p>
+                <img src="logos/sura.png" alt="Sura" class="img-fluid">
+            </div>
+            <div class="col-md-3 mb-4">
+                <p class="fw-bold small">Mediapartners</p>
+                <img src="logos/ciudadano.png" alt="El Ciudadano" class="img-fluid mb-1">
+                <img src="logos/latercera.png" alt="La Tercera" class="img-fluid mb-1">
+                <img src="logos/duna.png" alt="Duna" class="img-fluid">
+            </div>
+            <div class="col-md-3 mb-4">
+                <p class="fw-bold small">Somos parte</p>
+                <img src="logos/chile.png" alt="Chile" class="img-fluid mb-1">
+                <img src="logos/redsalas.png" alt="Red Salas" class="img-fluid mb-1">
+                <img src="logos/redelae.png" alt="Redelae" class="img-fluid mb-1">
+                <img src="logos/barrioarte.png" alt="Barrio Arte" class="img-fluid mb-1">
+                <img src="logos/riee.png" alt="RIEE" class="img-fluid">
+            </div>
+        </div>
+
+
+        <div class="text-center border-top pt-3 mt-4">
+            <img src="logos/gam.png" alt="Logo GAM" style="height: 40px;">
+            <p class="mb-0">Centro Cultural Gabriela Mistral</p>
+            <p class="small">Av. Libertador Bernardo O’Higgins 227, Santiago, Chile<br>+56 2 2665 5500 — info@gam.cl</p>
+
+
+            <div>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-tiktok"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+
+</html>
